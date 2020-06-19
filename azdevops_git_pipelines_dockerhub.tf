@@ -1,7 +1,7 @@
 provider "azuredevops" {
   version = ">= 0.0.1"
-  org_service_url= "https://dev.azure.com/Azrockstar/" #export AZDO_ORG_SERVICE_URL
-  personal_access_token= "6bebkb2ori6hlz2gljoq7opmiz7kudjssmaaks44pzwdiip5loya" #export AZDO_PERSONAL_ACCESS_TOKEN
+  org_service_url= "" #export AZDO_ORG_SERVICE_URL
+  personal_access_token= "" #export AZDO_PERSONAL_ACCESS_TOKEN
 }
 
 resource "azuredevops_project" "project" {
@@ -38,9 +38,9 @@ resource "azuredevops_serviceendpoint_dockerregistry" "dockerhubregistry" {
 	project_id             = azuredevops_project.project.id
 	service_endpoint_name  = "Terraform-Created-DockerHub"
 
-    docker_username        = "mysticrenji" # export AZDO_DOCKERREGISTRY_SERVICE_CONNECTION_USERNAME 
-    docker_email           = "mysticrenji@gmail.com" # export AZDO_DOCKERREGISTRY_SERVICE_CONNECTION_EMAIL
-    docker_password        = "Sayonara!1"  # export AZDO_DOCKERREGISTRY_SERVICE_CONNECTION_PASSWORD
+    docker_username        = "" # export AZDO_DOCKERREGISTRY_SERVICE_CONNECTION_USERNAME 
+    docker_email           = "" # export AZDO_DOCKERREGISTRY_SERVICE_CONNECTION_EMAIL
+    docker_password        = ""  # export AZDO_DOCKERREGISTRY_SERVICE_CONNECTION_PASSWORD
     registry_type          = "DockerHub"
 }
 
